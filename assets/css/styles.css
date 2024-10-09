@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: #0f0f0f;
+            font-family: 'Orbitron', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .clock-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #0d043888;
+            padding: 20px;
+            border-radius: 15px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(25, 25, 25, 0.5);
+            border: 2px solid transparent;
+            animation: borderAnimation 1s linear infinite;
+        }
+
+        .clock-part {
+            margin: 0 10px;
+            text-align: center;
+            
+        }
+
+        .flip-clock-wrapper ul li a div div.inn {
+    color:#ffffff; /* استبدل بـ اللون المطلوب */
+}
+
+
+        .label {
+            color: #fefeff;
+            margin-top: 10px;
+        }
+
+        .date {
+    margin-top: 20px;
+    font-size: 3em;
+    color: #cdcdcd9c;
+
+    /* text-shadow: 0 0 10px #f4f2f5, 0 0 20px #d4d4d4; */
+}
+
+
+        @keyframes borderAnimation {
+            0% {
+                border-color: #220469;
+            }
+            25% {
+                border-color: #eee7ee;
+            }
+            50% {
+                border-color: #795da7;
+            }
+            75% {
+                border-color: #3532d2a6;
+            }
+            100% {
+                border-color: #714be1;
+            }
+        }
+
+        .clock-container::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border: 5px solid;
+            border-radius: 15px;
+            animation: borderAnimation 1s linear infinite;
+            z-index: -1;
+            filter: blur(10px);
+        }
+        .video-background {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+            transform: translateX(-50%) translateY(-50%);
+            background-size:contain;
+            filter: blur(5px);
+}
